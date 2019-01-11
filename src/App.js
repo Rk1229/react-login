@@ -91,17 +91,16 @@ class App extends Component {
             </FormGroup>
           </Col>
           <Col>
-            <FormGroup check> 
-              <Label check>
+            <FormGroup check inline> 
                 <Input
                   type="checkbox"
                   name="checkbox"
                   id="checkbox"
                   required
                 />
-                <br></br>
+                <Label check>
                 Remember Me
-              </Label>
+                </Label>
             </FormGroup>
           </Col>
           <Button color="primary" size="lg">Submit</Button>
