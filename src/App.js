@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   Container, Col, Form,
   FormGroup, Label, Input,
-  Button, FormText, FormFeedback,
+  Button, FormText, FormFeedback
 } from 'reactstrap';
 import './App.css';
 
@@ -58,6 +58,7 @@ class App extends Component {
                 name="email"
                 id="exampleEmail"
                 placeholder="myemail@email.com"
+                size="lg"
                 value={ email }
                 valid={ this.state.validate.emailState === 'has-success' }
                 invalid={ this.state.validate.emailState === 'has-danger' }
@@ -85,10 +86,23 @@ class App extends Component {
                 placeholder="********"
                 value={ password }
                 onChange={ (e) => this.handleChange(e) }
+                size="lg"
             />
             </FormGroup>
           </Col>
-          <Button>Submit</Button>
+          <Col>
+            <FormGroup>
+                <Input
+                  type="checkbox"
+                  name="checkbox"
+                  id="checkbox"
+                  required
+                />
+              <br></br>
+                <Label for="checkbox">Remember Me</Label>
+            </FormGroup>
+          </Col>
+          <Button color="primary" size="lg">Submit</Button>
       </Form>
       </Container>
     );
