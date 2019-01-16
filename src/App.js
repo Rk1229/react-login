@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   Container, Col, Form,
   FormGroup, Label, Input,
-  Button, FormText, FormFeedback
+  Button, FormText, FormFeedback,CustomInput,
 } from 'reactstrap';
 import './App.css';
 
@@ -92,15 +92,15 @@ class App extends Component {
           </Col>
           <Col>
             <FormGroup check inline> 
-                <Input
+                <CustomInput
                   type="checkbox"
                   name="checkbox"
+                  size="lg"
                   id="checkbox"
+                  label="Remember Me"
                   required
+                  inline
                 />
-                <Label check>
-                Remember Me
-                </Label>
             </FormGroup>
           </Col>
           <Button color="primary" size="lg">Submit</Button>
